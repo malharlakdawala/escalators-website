@@ -2,7 +2,7 @@
 <html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>escalators.ai — Future of Work, escalated by AI</title>
+<title>Future of Work, escalated by AI</title>
 <meta name="description" content="escalators.ai helps large organizations design and build AI-powered experiences inside the systems they already use.">
 <meta name="theme-color" content="#F7F7F6">
 <meta property="og:title" content="escalators.ai — Future of Work, escalated by AI">
@@ -124,56 +124,28 @@ img,svg{max-width:100%}
   h2{font-size:clamp(28px,8vw,40px)!important}
 }
 
-/* ---------- Hero animation: agent cloud ---------- */
-.hero-anim{flex:1 1 400px;min-width:0;max-width:540px;width:100%}
-.ac{position:relative;width:100%;aspect-ratio:1/1;container-type:inline-size;border-radius:32px;overflow:hidden;
-  background:radial-gradient(circle at 50% 50%,#2A0C0E 0%,#140A0B 38%,#0B0B0D 72%);box-shadow:0 30px 80px rgba(14,14,16,.28),inset 0 0 0 1px rgba(255,255,255,.06)}
-.ac-grid{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.12) 1px,transparent 1.2px);background-size:22px 22px;
-  -webkit-mask-image:radial-gradient(circle at 50% 50%,#000 20%,transparent 72%);mask-image:radial-gradient(circle at 50% 50%,#000 20%,transparent 72%)}
-.ac-sweep{position:absolute;inset:-20%;background:conic-gradient(from 0deg,transparent 0deg,rgba(215,25,31,.22) 40deg,transparent 80deg);animation:ac-spin 9s linear infinite;
-  -webkit-mask-image:radial-gradient(circle,#000 30%,transparent 62%);mask-image:radial-gradient(circle,#000 30%,transparent 62%)}
-.ac-orbit{position:absolute;left:50%;top:50%;border-radius:50%;transform:translate(-50%,-50%);border:1px dashed rgba(255,255,255,.14)}
-.ac-o1{width:56%;height:56%}
-.ac-o2{width:78%;height:78%;border-style:solid;border-color:rgba(255,255,255,.07)}
-.ac-o3{width:40%;height:40%;border-color:rgba(255,107,112,.25);animation:ac-spin 20s linear infinite}
-
-.ac-ring{position:absolute;inset:0;animation:ac-spin var(--dur) linear infinite}
-.ac-rev{animation-direction:reverse}
-.ac-arm{position:absolute;left:50%;top:50%;width:var(--r);height:0;transform:rotate(var(--a));transform-origin:0 50%}
-.ac-beam{position:absolute;left:12cqw;right:6cqw;top:-.5px;height:1px;background:linear-gradient(90deg,rgba(255,107,112,.55),rgba(255,255,255,.06));transition:background .4s}
-.ac-beam i{position:absolute;top:-2px;left:0;width:5px;height:5px;border-radius:50%;background:#FF6B70;box-shadow:0 0 10px 2px rgba(255,107,112,.8);animation:ac-packet 2.4s linear infinite;animation-delay:var(--d)}
-.ac-bot{position:absolute;right:0;top:0;width:13cqw;transform:translate(50%,-50%) rotate(calc(-1 * var(--a)))}
-.ac-bot-spin{display:flex;flex-direction:column;align-items:center;gap:.8cqw;animation:ac-spin var(--dur) linear infinite reverse}
-.ac-rev .ac-bot-spin{animation-direction:normal}
-.ac-bot svg{width:100%;height:auto;display:block;filter:drop-shadow(0 6px 14px rgba(0,0,0,.5));transition:filter .4s,transform .4s}
-.ac-bot b{font-size:clamp(9px,2.3cqw,12px);font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.72);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:2px 7px;border-radius:999px;white-space:nowrap;transition:all .4s}
-.ac-eye{animation:ac-blink 4s infinite;transform-box:fill-box;transform-origin:center}
-.ac-arm.on .ac-bot svg{filter:drop-shadow(0 0 14px rgba(255,80,86,.85));transform:scale(1.12)}
-.ac-arm.on .ac-bot b{color:#fff;background:#D7191F;border-color:#D7191F}
-.ac-arm.on .ac-beam{background:linear-gradient(90deg,#FF6B70,rgba(255,107,112,.4))}
-.ac-arm.on .ac-beam i{animation-duration:.9s}
-
-.ac-core{position:absolute;left:50%;top:50%;width:26cqw;height:26cqw;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center}
-.ac-orb{position:relative;width:100%;height:100%;border-radius:50%;display:flex;align-items:center;justify-content:center;
-  background:radial-gradient(circle at 35% 30%,#FF6B70 0%,#D7191F 38%,#7A0B0F 78%,#3A0507 100%);
-  box-shadow:0 0 40px 6px rgba(215,25,31,.55),0 0 110px 20px rgba(215,25,31,.25),inset 0 -8px 24px rgba(0,0,0,.35);animation:ac-breathe 4s ease-in-out infinite}
-.ac-orb::after{content:"";position:absolute;inset:-9%;border-radius:50%;border:1.5px solid transparent;border-top-color:rgba(255,255,255,.7);border-right-color:rgba(255,255,255,.2);animation:ac-spin 3.5s linear infinite}
-.ac-pulse{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(255,107,112,.6);animation:ac-ripple 3s ease-out infinite}
-.ac-p2{animation-delay:1.5s}
-.ac-core-label{position:absolute;top:calc(100% + 3.2cqw);font-size:clamp(10px,2.6cqw,13px);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#fff;white-space:nowrap}
-
-.ac-status{position:relative;margin:14px auto 0;width:max-content;min-width:min(330px,100%);max-width:100%;display:flex;align-items:center;gap:8px;
-  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:clamp(10px,2.6cqw,13px);color:#E9E9E7;background:#0E0E10;border:1px solid #26262A;padding:7px 14px;border-radius:999px;white-space:nowrap;overflow:hidden}
-.ac-led{flex:none;width:7px;height:7px;border-radius:50%;background:#7BD88F;box-shadow:0 0 8px #7BD88F}
-.ac-caret{flex:none;width:7px;height:1.1em;background:#FF6B70;animation:ac-caret 1s steps(1) infinite}
-
-@keyframes ac-spin{to{transform:rotate(360deg)}}
-@keyframes ac-packet{0%{left:0;opacity:0}10%{opacity:1}90%{opacity:1}100%{left:100%;opacity:0}}
-@keyframes ac-blink{0%,92%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
-@keyframes ac-breathe{50%{transform:scale(1.05)}}
-@keyframes ac-ripple{0%{transform:scale(1);opacity:.8}100%{transform:scale(2.3);opacity:0}}
-@keyframes ac-caret{50%{opacity:0}}
-@media (prefers-reduced-motion:reduce){.ac *,.ac *::after{animation:none!important}}
+/* ---------- Hero: Agent Cloud ---------- */
+.hero-anim{flex:0 1 540px;min-width:0;max-width:560px;width:100%;margin:0 auto}
+.hx-root{position:relative;width:100%;aspect-ratio:1/1.14;container-type:inline-size}
+.hx-cv{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hx-tags{position:absolute;inset:0;pointer-events:none;z-index:2}
+.hx-caret{display:inline-block;flex:none;width:2px;height:1.05em;margin-left:2px;vertical-align:-0.15em;background:#D7191F;animation:hx-blink 1s steps(1) infinite}
+@keyframes hx-blink{50%{opacity:0}}
+.ob-tag{position:absolute;left:0;top:0;font-size:clamp(9px,2.1cqw,11.5px);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#3A3A3F;padding:3px 10px;border-radius:999px;background:rgba(255,255,255,.82);border:1px solid #ECE4E4;box-shadow:0 4px 12px -4px rgba(14,14,16,.12);white-space:nowrap;transition:background .4s,color .4s,border-color .4s;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.ob-tag.on{background:#0E0E10;border-color:#0E0E10;color:#fff}
+.ob-status{position:absolute;left:3cqw;right:3cqw;bottom:2cqw;z-index:3;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:3cqw;padding:2.6cqw 3.4cqw;border-radius:20px;background:rgba(255,255,255,.78);border:1px solid #EFE6E6;box-shadow:0 18px 40px -18px rgba(120,10,16,.28);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);overflow:hidden}
+.ob-node{width:clamp(30px,8cqw,42px);height:auto;filter:drop-shadow(0 4px 10px rgba(215,25,31,.35))}
+.ob-txt{min-width:0;display:flex;flex-direction:column;gap:3px}
+.ob-eyebrow{font-size:clamp(9px,2cqw,11px);letter-spacing:.12em;text-transform:uppercase;color:#8A8A90;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ob-eyebrow em{font-style:normal;color:#D7191F}.ob-eyebrow b{color:#0E0E10;font-weight:600}
+.ob-task{display:flex;align-items:center;font-size:clamp(12px,3cqw,15.5px);color:#0E0E10;font-weight:500;white-space:nowrap;overflow:hidden}
+.ob-meta{display:flex;flex-direction:column;align-items:flex-end;line-height:1.15}
+.ob-meta b{font-size:clamp(13px,3.2cqw,18px);color:#0E0E10;font-weight:600;font-variant-numeric:tabular-nums}
+.ob-meta span{font-size:clamp(9px,2cqw,11px);color:#8A8A90}
+.ob-bar{position:absolute;left:0;right:0;bottom:0;height:2px;background:#F3EBEB}
+.ob-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#C2141A,#FF6B72)}
+@container (max-width:380px){.ob-meta{display:none}.ob-status{grid-template-columns:auto 1fr}}
+@media (prefers-reduced-motion:reduce){.hx-root *{animation:none!important}}
 
 /* ---------- Clients strip ---------- */
 .clients{max-width:1200px;margin:0 auto;background:#111112;border-radius:28px;padding:30px 36px;display:flex;align-items:center;gap:32px;overflow:hidden}
@@ -342,6 +314,13 @@ img,svg{max-width:100%}
 .uc-report{flex:1;min-width:0;margin-left:8px;background:#F7F7F6;border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:5px}
 .uc-report strong{font-size:13px;margin-bottom:2px}
 #contact>svg:last-child{width:calc(100% + 2 * max(16px,3vw))!important;margin-left:calc(-1 * max(16px,3vw))}
+.uc-zoom{display:block;width:100%;padding:0;border:0;background:#fff;cursor:zoom-in}
+.uc-zoom img{display:block;width:100%;height:208px;object-fit:cover;transition:transform .4s}
+.uc-card:hover .uc-zoom img{transform:scale(1.03)}
+.uc-zoom:focus-visible{outline:2px solid #C2141A;outline-offset:-2px}
+.lightbox{position:fixed;inset:0;z-index:90;background:rgba(10,10,12,.82);display:flex;align-items:center;justify-content:center;padding:4vw;cursor:zoom-out;animation:ap-in .25s ease}
+.lightbox[hidden]{display:none}
+.lightbox img{max-width:100%;max-height:100%;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.5);background:#fff}
 </style>
 
 <div style="width: 100%; background: #F7F7F6; color: #0E0E10; font-family: 'Figtree', system-ui, sans-serif; font-size: 17px; line-height: 1.6">
@@ -366,7 +345,7 @@ img,svg{max-width:100%}
 <a href="#ecosystem" style="text-decoration: none">Ecosystem</a>
 <a href="#use-cases" style="text-decoration: none">Use cases</a>
 <a href="#faq" style="text-decoration: none">FAQ</a>
-<a href="#contact" class="nav-cta" style="text-decoration: none; background: #0E0E10; color: #FFFFFF; font-weight: 500; padding: 10px 20px; border-radius: 999px">Book a strategy call</a>
+<a href="https://tidycal.com/escalators" target="_blank" rel="noopener" class="nav-cta" style="text-decoration: none; background: #0E0E10; color: #FFFFFF; font-weight: 500; padding: 10px 20px; border-radius: 999px">Book a strategy call</a>
 </div>
 </nav>
 </header>
@@ -376,42 +355,14 @@ img,svg{max-width:100%}
 <h1 class="hero-title"><span class="t1">Welcome to</span><span class="t2">Future of Work,</span><span class="t3">escalated by AI.</span></h1>
 <p style="margin: 0; max-width: 560px; font-size: 19px; color: #3A3A3F; line-height: 1.55">We help large organizations design &amp; build AI-powered experiences inside the systems they already use, so productivity accelerates without another rip-and-replace program.</p>
 <div class="hero-ctas" style="display: flex; flex-wrap: wrap; gap: 12px">
-<a href="#contact" style="text-decoration: none; background: #0E0E10; color: #FFFFFF; font-weight: 500; padding: 14px 26px; border-radius: 999px">Book a strategy call →</a>
+<a href="https://tidycal.com/escalators" target="_blank" rel="noopener" style="text-decoration: none; background: #0E0E10; color: #FFFFFF; font-weight: 500; padding: 14px 26px; border-radius: 999px">Book a strategy call →</a>
 <a href="#approach" style="text-decoration: none; background: #FFFFFF; color: #0E0E10; font-weight: 500; padding: 13px 26px; border-radius: 999px; border: 1px solid #D6D6D8">Explore our approach</a>
 </div>
 </div>
 
-<!-- Hero animation: agent cloud with orbiting sub-agents -->
-<div class="hero-anim">
-<div class="ac" aria-hidden="true">
-  <div class="ac-grid"></div>
-  <div class="ac-sweep"></div>
-  <div class="ac-orbit ac-o1"></div>
-  <div class="ac-orbit ac-o2"></div>
-  <div class="ac-orbit ac-o3"></div>
-
-  <div class="ac-ring ac-r1" style="--r:28%;--dur:26s">
-    <div class="ac-arm" data-agent="finance" style="--a:-90deg;--d:0.0s"><span class="ac-beam"><i></i></span><div class="ac-bot"><div class="ac-bot-spin"><svg viewBox="0 0 40 44" fill="none"><line x1="20" y1="2" x2="20" y2="9" stroke="#FF6B70" stroke-width="2"/><circle cx="20" cy="3" r="2.5" fill="#FF6B70"/><rect x="5" y="9" width="30" height="24" rx="9" fill="#F7F7F6"/><rect x="9" y="14" width="22" height="13" rx="6" fill="#0E0E10"/><rect class="ac-eye" x="13" y="18" width="4" height="5" rx="2" fill="#FF6B70"/><rect class="ac-eye" x="23" y="18" width="4" height="5" rx="2" fill="#FF6B70"/><rect x="1.5" y="17" width="3.5" height="8" rx="1.75" fill="#BDBDBA"/><rect x="35" y="17" width="3.5" height="8" rx="1.75" fill="#BDBDBA"/><rect x="13" y="35" width="14" height="6" rx="3" fill="#BDBDBA"/></svg><b>Finance</b></div></div></div>
-    <div class="ac-arm" data-agent="hr" style="--a:30deg;--d:0.6s"><span class="ac-beam"><i></i></span><div class="ac-bot"><div class="ac-bot-spin"><svg viewBox="0 0 40 44" fill="none"><line x1="20" y1="2" x2="20" y2="9" stroke="#FF6B70" stroke-width="2"/><circle cx="20" cy="3" r="2.5" fill="#FF6B70"/><rect x="5" y="9" width="30" height="24" rx="9" fill="#F7F7F6"/><rect x="9" y="14" width="22" height="13" rx="6" fill="#0E0E10"/><rect class="ac-eye" x="13" y="18" width="4" height="5" rx="2" fill="#FF6B70"/><rect class="ac-eye" x="23" y="18" width="4" height="5" rx="2" fill="#FF6B70"/><rect x="1.5" y="17" width="3.5" height="8" rx="1.75" fill="#BDBDBA"/><rect x="35" y="17" width="3.5" height="8" rx="1.75" fill="#BDBDBA"/><rect x="13" y="35" width="14" height="6" rx="3" fill="#BDBDBA"/></svg><b>HR</b></div></div></div>
-    <div class="ac-arm" data-agent="sales" style="--a:150deg;--d:1.2s"><span class="ac-beam"><i></i></span><div class="ac-bot"><div class="ac-bot-spin"><svg viewBox="0 0 40 44" fill="none"><line x1="20" y1="2" x2="20" y2="9" stroke="#FF6B70" stroke-width="2"/><circle cx="20" cy="3" r="2.5" fill="#FF6B70"/><rect x="5" y="9" width="30" height="24" rx="9" fill="#F7F7F6"/><rect x="9" y="14" width="22" height="13" rx="6" fill="#0E0E10"/><rect class="ac-eye" x="13" y="18" width="4" height="5" rx="2" fill="#FF6B70"/><rect class="ac-eye" x="23" y="18" width="4" height="5" rx="2" fill="#FF6B70"/><rect x="1.5" y="17" width="3.5" height="8" rx="1.75" fill="#BDBDBA"/><rect x="35" y="17" width="3.5" height="8" rx="1.75" fill="#BDBDBA"/><rect x="13" y="35" width="14" height="6" rx="3" fill="#BDBDBA"/></svg><b>Sales</b></div></div></div>
-  </div>
-  <div class="ac-ring ac-r2 ac-rev" style="--r:39%;--dur:40s">
-    <div class="ac-arm" data-agent="it" style="--a:-45deg;--d:0.0s"><span class="ac-beam"><i></i></span><div class="ac-bot"><div class="ac-bot-spin"><svg viewBox="0 0 40 44" fill="none"><line x1="20" y1="2" x2="20" y2="9" stroke="#FF6B70" stroke-width="2"/><circle cx="20" cy="3" r="2.5" fill="#FF6B70"/><rect x="5" y="9" width="30" height="24" rx="9" fill="#F7F7F6"/><rect x="9" y="14" width="22" height="13" rx="6" fill="#0E0E10"/><rect class="ac-eye" x="13" y="18" width="4" height="5" rx="2" fill="#FF6B70"/><rect class="ac-eye" x="23" y="18" width="4" height="5" rx="2" fill="#FF6B70"/><rect x="1.5" y="17" width="3.5" height="8" rx="1.75" fill="#BDBDBA"/><rect x="35" y="17" width="3.5" height="8" rx="1.75" fill="#BDBDBA"/><rect x="13" y="35" width="14" height="6" rx="3" fill="#BDBDBA"/></svg><b>IT</b></div></div></div>
-    <div class="ac-arm" data-agent="support" style="--a:45deg;--d:0.6s"><span class="ac-beam"><i></i></span><div class="ac-bot"><div class="ac-bot-spin"><svg viewBox="0 0 40 44" fill="none"><line x1="20" y1="2" x2="20" y2="9" stroke="#FF6B70" stroke-width="2"/><circle cx="20" cy="3" r="2.5" fill="#FF6B70"/><rect x="5" y="9" width="30" height="24" rx="9" fill="#F7F7F6"/><rect x="9" y="14" width="22" height="13" rx="6" fill="#0E0E10"/><rect class="ac-eye" x="13" y="18" width="4" height="5" rx="2" fill="#FF6B70"/><rect class="ac-eye" x="23" y="18" width="4" height="5" rx="2" fill="#FF6B70"/><rect x="1.5" y="17" width="3.5" height="8" rx="1.75" fill="#BDBDBA"/><rect x="35" y="17" width="3.5" height="8" rx="1.75" fill="#BDBDBA"/><rect x="13" y="35" width="14" height="6" rx="3" fill="#BDBDBA"/></svg><b>Support</b></div></div></div>
-    <div class="ac-arm" data-agent="legal" style="--a:135deg;--d:1.2s"><span class="ac-beam"><i></i></span><div class="ac-bot"><div class="ac-bot-spin"><svg viewBox="0 0 40 44" fill="none"><line x1="20" y1="2" x2="20" y2="9" stroke="#FF6B70" stroke-width="2"/><circle cx="20" cy="3" r="2.5" fill="#FF6B70"/><rect x="5" y="9" width="30" height="24" rx="9" fill="#F7F7F6"/><rect x="9" y="14" width="22" height="13" rx="6" fill="#0E0E10"/><rect class="ac-eye" x="13" y="18" width="4" height="5" rx="2" fill="#FF6B70"/><rect class="ac-eye" x="23" y="18" width="4" height="5" rx="2" fill="#FF6B70"/><rect x="1.5" y="17" width="3.5" height="8" rx="1.75" fill="#BDBDBA"/><rect x="35" y="17" width="3.5" height="8" rx="1.75" fill="#BDBDBA"/><rect x="13" y="35" width="14" height="6" rx="3" fill="#BDBDBA"/></svg><b>Legal</b></div></div></div>
-    <div class="ac-arm" data-agent="data" style="--a:225deg;--d:1.8s"><span class="ac-beam"><i></i></span><div class="ac-bot"><div class="ac-bot-spin"><svg viewBox="0 0 40 44" fill="none"><line x1="20" y1="2" x2="20" y2="9" stroke="#FF6B70" stroke-width="2"/><circle cx="20" cy="3" r="2.5" fill="#FF6B70"/><rect x="5" y="9" width="30" height="24" rx="9" fill="#F7F7F6"/><rect x="9" y="14" width="22" height="13" rx="6" fill="#0E0E10"/><rect class="ac-eye" x="13" y="18" width="4" height="5" rx="2" fill="#FF6B70"/><rect class="ac-eye" x="23" y="18" width="4" height="5" rx="2" fill="#FF6B70"/><rect x="1.5" y="17" width="3.5" height="8" rx="1.75" fill="#BDBDBA"/><rect x="35" y="17" width="3.5" height="8" rx="1.75" fill="#BDBDBA"/><rect x="13" y="35" width="14" height="6" rx="3" fill="#BDBDBA"/></svg><b>Data</b></div></div></div>
-  </div>
-
-  <div class="ac-core">
-    <span class="ac-pulse"></span><span class="ac-pulse ac-p2"></span>
-    <div class="ac-orb">
-      <svg viewBox="0 0 64 64" width="46%" fill="none"><path d="M20 44h26a10 10 0 0 0 1-20 14 14 0 0 0-27-3 11 11 0 0 0 0 23z" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/><path d="M24 38h5v-5h5v-5h6" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="42" cy="22" r="2.6" fill="#FF6B70"/></svg>
-    </div>
-    <span class="ac-core-label">Agent Cloud</span>
-  </div>
-
-</div>
-  <div class="ac-status"><span class="ac-led"></span><span data-status></span><span class="ac-caret"></span></div>
+<!-- Hero: Agent Cloud (rendered by script; three treatments) -->
+<div class="hero-anim" data-variant="orbit">
+<div class="hx-root" aria-hidden="true"></div>
 </div>
 </section>
 </div><section id="brands" style="padding: 40px max(16px, 3vw) 72px">
@@ -535,7 +486,7 @@ img,svg{max-width:100%}
 </div>
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 28px; background: #FFFFFF; border: 1px solid #E6E6E4; border-radius: 999px; padding: 12px 12px 12px 28px">
 <p style="margin: 0; font-size: 16px; color: #3A3A3F; flex: 1 1 320px"><strong style="font-weight: 600; color: #0E0E10">Not ready to commit?</strong> Start with a 45-minute workflow mapping call. We'll tell you plainly if AI isn't the right answer yet.</p>
-<a href="#contact" style="text-decoration: none; background: #0E0E10; color: #FFFFFF; font-weight: 500; padding: 12px 22px; border-radius: 999px">Book the call →</a>
+<a href="https://tidycal.com/escalators" target="_blank" rel="noopener" style="text-decoration: none; background: #0E0E10; color: #FFFFFF; font-weight: 500; padding: 12px 22px; border-radius: 999px">Book the call →</a>
 </div>
 </div>
 </section>
@@ -686,25 +637,14 @@ img,svg{max-width:100%}
 <div class="uc-tr"><span><i class="uc-sw" style="background:#A9C6E8"></i>Denim jacket</span><span>Price ▲ 4% (demand)</span><span class="ok">Live</span></div>
 <div class="uc-tr"><span><i class="uc-sw" style="background:#C9E4C5"></i>Canvas tote</span><span>Restock 120 units</span><span class="wait">Approve</span></div>
 <div class="uc-tr"><span><i class="uc-sw" style="background:#E8C5D8"></i>Order #4821</span><span>Return auto-resolved</span><span class="ok">Done</span></div>
-</div></div></div><div class="uc-text"><span class="uc-ind">E-commerce</span><h3>AI operations for online stores</h3><p>Agents write listings, adjust prices on demand signals, plan restocks and resolve routine returns, so the team focuses on growth.</p><div class="uc-tags"><span>Automate</span><span>Escalate</span></div></div></article><article class="uc-card"><div class="uc-shot" aria-hidden="true"><div class="uc-bar"><i></i><i></i><i></i><span>call intelligence · scorecard</span></div><div class="uc-body">
-<div class="uc-split">
-<div class="uc-ring" style="--p:86"><strong>86</strong><span>Call score</span></div>
-<div class="uc-col"><div class="uc-row"><span>Discovery</span><div class="uc-meter"><b style="--w:92%"></b></div><em>92</em></div><div class="uc-row"><span>Objections</span><div class="uc-meter"><b style="--w:78%"></b></div><em>78</em></div><div class="uc-row"><span>Next steps</span><div class="uc-meter"><b style="--w:88%"></b></div><em>88</em></div><div class="uc-row"><span>Talk ratio</span><div class="uc-meter"><b style="--w:64%"></b></div><em>64</em></div></div>
-</div>
-<div class="uc-quote"><b>AI coach:</b> Great discovery. Confirm budget owner before the demo.</div></div></div><div class="uc-text"><span class="uc-ind">Sales</span><h3>Call Intelligence Suite</h3><p>Every sales call is transcribed, scored against your playbook and turned into coaching notes and CRM updates automatically.</p><div class="uc-tags"><span>Optimize</span><span>Automate</span></div></div></article><article class="uc-card"><div class="uc-shot" aria-hidden="true"><div class="uc-bar"><i></i><i></i><i></i><span>marketing · workflow</span></div><div class="uc-body">
+</div></div></div><div class="uc-text"><span class="uc-ind">E-commerce</span><h3>AI operations for online stores</h3><p>Agents write listings, adjust prices on demand signals, plan restocks and resolve routine returns, so the team focuses on growth.</p><div class="uc-tags"><span>Automate</span><span>Escalate</span></div></div></article><article class="uc-card"><div class="uc-shot"><div class="uc-bar" aria-hidden="true"><i></i><i></i><i></i><span>call intelligence · agent workflow</span></div><button type="button" class="uc-zoom" data-full="assets/usecases/workflow.webp" aria-label="Enlarge screenshot: Agent workflow that checks for a demo, summarises the call, drafts a follow-up email and updates Salesforce"><img src="assets/usecases/workflow.webp" alt="Agent workflow that checks for a demo, summarises the call, drafts a follow-up email and updates Salesforce" loading="lazy" style="object-position:left top"></button></div><div class="uc-text"><span class="uc-ind">Sales</span><h3>Call Intelligence Suite</h3><p>Every call is transcribed and checked for a demo. Agents then summarise the hot-points, draft the follow-up email and update Salesforce.</p><div class="uc-tags"><span>Optimize</span><span>Automate</span></div></div></article><article class="uc-card"><div class="uc-shot" aria-hidden="true"><div class="uc-bar"><i></i><i></i><i></i><span>marketing · workflow</span></div><div class="uc-body">
 <div class="uc-flow"><span>Brief</span><i>→</i><span class="on">Copy agent</span><i>→</i><span class="on">Design agent</span><i>→</i><span>Review</span><i>→</i><span>Publish</span></div>
-<div class="uc-cal"><div><em>Mon</em><b class="p1">LinkedIn post</b></div><div><em>Tue</em><b class="p2">Email: Q3 promo</b></div><div><em>Wed</em></div><div><em>Thu</em><b class="p1">Blog + 5 cuts</b></div><div><em>Fri</em><b class="p3">Ad set A/B</b></div></div></div></div><div class="uc-text"><span class="uc-ind">Marketing</span><h3>Automated marketing workflows</h3><p>From brief to publish: copy and design agents draft the content, humans review, and the campaign calendar fills itself.</p><div class="uc-tags"><span>Automate</span></div></div></article><article class="uc-card"><div class="uc-shot" aria-hidden="true"><div class="uc-bar"><i></i><i></i><i></i><span>strategy quests · leaderboard</span></div><div class="uc-body">
-<div class="uc-quest"><span>Quest of the week</span><strong>Map one manual hand-off in your team</strong><em>+250 XP</em></div>
-<div class="uc-lb"><div class="uc-row"><span><i class="uc-av">🥇</i>Sales</span><div class="uc-meter"><b style="--w:92%"></b></div><em>4,120 XP</em></div><div class="uc-row"><span><i class="uc-av">🥈</i>Finance</span><div class="uc-meter"><b style="--w:78%"></b></div><em>3,480 XP</em></div><div class="uc-row"><span><i class="uc-av">🥉</i>Ops</span><div class="uc-meter"><b style="--w:61%"></b></div><em>2,730 XP</em></div><div class="uc-row"><span><i class="uc-av">4</i>HR</span><div class="uc-meter"><b style="--w:44%"></b></div><em>1,960 XP</em></div></div></div></div><div class="uc-text"><span class="uc-ind">Strategy</span><h3>Gamified strategy workflow</h3><p>Turn strategy into weekly quests. Teams earn XP for improving workflows, and leaders see adoption in real time.</p><div class="uc-tags"><span>Optimize</span><span>Escalate</span></div></div></article><article class="uc-card"><div class="uc-shot" aria-hidden="true"><div class="uc-bar"><i></i><i></i><i></i><span>demand planning · agent</span></div><div class="uc-body">
+<div class="uc-cal"><div><em>Mon</em><b class="p1">LinkedIn post</b></div><div><em>Tue</em><b class="p2">Email: Q3 promo</b></div><div><em>Wed</em></div><div><em>Thu</em><b class="p1">Blog + 5 cuts</b></div><div><em>Fri</em><b class="p3">Ad set A/B</b></div></div></div></div><div class="uc-text"><span class="uc-ind">Marketing</span><h3>Automated marketing workflows</h3><p>From brief to publish: copy and design agents draft the content, humans review, and the campaign calendar fills itself.</p><div class="uc-tags"><span>Automate</span></div></div></article><article class="uc-card"><div class="uc-shot"><div class="uc-bar" aria-hidden="true"><i></i><i></i><i></i><span>ops universe · live 3D view</span></div><button type="button" class="uc-zoom" data-full="assets/usecases/dashboard.webp" aria-label="Enlarge screenshot: 3D operations dashboard showing warehouses, trucks, late orders and KPIs"><img src="assets/usecases/dashboard.webp" alt="3D operations dashboard showing warehouses, trucks, late orders and KPIs" loading="lazy" style="object-position:left top"></button></div><div class="uc-text"><span class="uc-ind">Strategy</span><h3>Gamified strategy workflow</h3><p>Operations become a live, game-like 3D world. Teams see stock, trucks and late orders at a glance and act on what matters first.</p><div class="uc-tags"><span>Optimize</span><span>Escalate</span></div></div></article><article class="uc-card"><div class="uc-shot" aria-hidden="true"><div class="uc-bar"><i></i><i></i><i></i><span>demand planning · agent</span></div><div class="uc-body">
 <svg class="uc-chart" viewBox="0 0 300 110" preserveAspectRatio="none"><path class="area" d="M0,80 L30,72 L60,76 L90,60 L120,64 L150,50 L180,54 L180,110 L0,110Z"/>
 <polyline class="act" points="0,80 30,72 60,76 90,60 120,64 150,50 180,54"/><polyline class="fc" points="180,54 210,44 240,48 270,34 300,30"/>
 <line x1="180" y1="0" x2="180" y2="110" class="now"/></svg>
 <div class="uc-legend"><span><i class="a"></i>Actual</span><span><i class="f"></i>AI forecast</span></div>
-<div class="uc-quote"><b>Agent:</b> Festive spike expected in week 42. Raise SKU-118 PO by 18% from Supplier B.</div></div></div><div class="uc-text"><span class="uc-ind">Supply chain</span><h3>Agentic demand planning</h3><p>Planning agents combine sales history, seasonality and supplier data to forecast demand and suggest purchase orders.</p><div class="uc-tags"><span>Automate</span><span>Escalate</span></div></div></article><article class="uc-card"><div class="uc-shot" aria-hidden="true"><div class="uc-bar"><i></i><i></i><i></i><span>due diligence · research agent</span></div><div class="uc-body">
-<div class="uc-split">
-<div class="uc-sources"><span>Company registry</span><span>News &amp; media</span><span>LinkedIn</span><span>Funding databases</span><span>Court records</span></div>
-<div class="uc-report"><strong>Target Co. — summary</strong><span class="ok">✓ Directors verified</span><span class="ok">✓ 3 funding rounds matched</span><span class="warn">! 1 pending legal case</span><span class="ok">✓ Hiring up 40% YoY</span></div>
-</div></div></div><div class="uc-text"><span class="uc-ind">Investments</span><h3>AI for due diligence</h3><p>A research agent scrapes registries, news, funding and legal sources, then builds one verified summary with red flags.</p><div class="uc-tags"><span>Automate</span></div></div></article></div>
+<div class="uc-quote"><b>Agent:</b> Festive spike expected in week 42. Raise SKU-118 PO by 18% from Supplier B.</div></div></div><div class="uc-text"><span class="uc-ind">Supply chain</span><h3>Agentic demand planning</h3><p>Planning agents combine sales history, seasonality and supplier data to forecast demand and suggest purchase orders.</p><div class="uc-tags"><span>Automate</span><span>Escalate</span></div></div></article><article class="uc-card"><div class="uc-shot"><div class="uc-bar" aria-hidden="true"><i></i><i></i><i></i><span>due diligence · deal pipeline</span></div><button type="button" class="uc-zoom" data-full="assets/usecases/diligence-full.webp" aria-label="Enlarge screenshot: Deal pipeline with an AI risk score for each company"><img src="assets/usecases/diligence.webp" alt="Deal pipeline with an AI risk score for each company" loading="lazy" style="object-position:left top"></button></div><div class="uc-text"><span class="uc-ind">Investments</span><h3>AI for due diligence</h3><p>A research agent scrapes registries, news, funding and legal sources, then scores every company in the pipeline for risk.</p><div class="uc-tags"><span>Automate</span></div></div></article></div>
 </div>
 </section>
 
@@ -836,7 +776,7 @@ img,svg{max-width:100%}
 <div style="max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 22px; text-align: center">
 <h2 style="margin: 0; font-weight: 500; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.08; letter-spacing: -0.025em">Ready to take your organization <span style="color: #C2141A">up a level?</span></h2>
 <p style="margin: 0; max-width: 560px; color: #3A3A3F; font-size: 18px">Tell us about one workflow that eats your teams' time. In a strategy call we'll sketch how AI could escalate it inside your current stack.</p>
-<a href="mailto:hello@escalators.ai" style="text-decoration: none; background: #0E0E10; color: #FFFFFF; font-weight: 500; padding: 14px 28px; border-radius: 999px">Book a strategy call →</a>
+<a href="https://tidycal.com/escalators" target="_blank" rel="noopener" style="text-decoration: none; background: #0E0E10; color: #FFFFFF; font-weight: 500; padding: 14px 28px; border-radius: 999px">Book a strategy call →</a>
 <span style="font-size: 15px; color: #3A3A3F; user-select: all">hello@escalators.ai</span>
 </div>
 <svg aria-hidden="true" viewBox="0 0 1440 140" preserveAspectRatio="none" style="display: block; width: 100%; height: 120px; margin-top: 72px"><path d="M0 70 C 240 10, 480 130, 720 80 S 1200 20, 1440 70 L1440 140 L0 140 Z" fill="#D7191F" fill-opacity="0.35"></path><path d="M0 95 C 300 50, 560 140, 860 95 S 1260 60, 1440 100 L1440 140 L0 140 Z" fill="#FFFFFF"></path></svg>
@@ -878,35 +818,258 @@ img,svg{max-width:100%}
   });
 })();
 
-// Hero agent cloud: type what each sub-agent is doing and light it up
+// Hero: Agent Cloud — a 3D particle sphere with specialist agents on tilted orbits.
 (function () {
-  var status = document.querySelector('.ac [data-status]');
-  if (!status) return;
-  var arms = Array.prototype.slice.call(document.querySelectorAll('.ac-arm'));
+  var host = document.querySelector('.hero-anim');
+  if (!host) return;
+  var root = host.querySelector('.hx-root');
+  var TAU = Math.PI * 2;
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var sleep = function (ms) { return new Promise(function (r) { setTimeout(r, ms); }); };
-  var tasks = {
-    finance: 'Finance agent · reconciling 1,240 invoices',
-    hr: 'HR agent · onboarding 32 new hires',
-    sales: 'Sales agent · updating CRM from 86 emails',
-    it: 'IT agent · resolving 14 access tickets',
-    support: 'Support agent · drafting 210 replies',
-    legal: 'Legal agent · pre-checking 9 contracts',
-    data: 'Data agent · syncing ERP → warehouse'
+
+  // Line icons (Lucide, ISC licence), drawn on a 24px grid
+  var ICONS = {
+    finance: '<path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/>',
+    hr: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+    sales: '<polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>',
+    it: '<rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/>',
+    support: '<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01M12 12h.01M16 12h.01"/>',
+    legal: '<path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>'
   };
-  var order = ['finance', 'it', 'hr', 'support', 'sales', 'legal', 'data'];
-  (async function loop() {
-    for (var n = 0; ; n = (n + 1) % order.length) {
-      var key = order[n], text = tasks[key];
-      arms.forEach(function (a) { a.classList.toggle('on', a.dataset.agent === key); });
-      if (reduced) { status.textContent = text; await sleep(3500); continue; }
-      status.textContent = '';
-      for (var i = 0; i < text.length; i++) { status.textContent += text[i]; await sleep(28 + Math.random() * 30); }
-      await sleep(1800);
-      while (status.textContent.length) { status.textContent = status.textContent.slice(0, -1); await sleep(12); }
+  var AGENTS = [
+    { key: 'finance', name: 'Finance', task: 'Reconciling 1,240 invoices' },
+    { key: 'hr', name: 'HR', task: 'Onboarding 32 new hires' },
+    { key: 'sales', name: 'Sales', task: 'Updating CRM from 86 emails' },
+    { key: 'it', name: 'IT Ops', task: 'Resolving 14 access tickets' },
+    { key: 'support', name: 'Support', task: 'Drafting 210 customer replies' },
+    { key: 'legal', name: 'Legal', task: 'Pre-checking 9 contracts' }
+  ];
+
+  function nodeSvg(icon, active) {
+    var face = active
+      ? '<radialGradient id="f" cx="35%" cy="28%" r="80%"><stop offset="0" stop-color="#FF7A80"/><stop offset=".55" stop-color="#E0161E"/><stop offset="1" stop-color="#9E0A10"/></radialGradient>'
+      : '<linearGradient id="f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F1F1F3"/></linearGradient>';
+    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs>' + face +
+      '<linearGradient id="r" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="' + (active ? '#FFB3B7' : '#FFFFFF') + '"/><stop offset="1" stop-color="' + (active ? '#B30E15' : '#E2D4D5') + '"/></linearGradient></defs>' +
+      '<circle cx="32" cy="32" r="29" fill="url(#f)" stroke="url(#r)" stroke-width="1.5"/>' +
+      '<ellipse cx="32" cy="17" rx="17" ry="7" fill="#fff" opacity="' + (active ? '.18' : '.7') + '"/>' +
+      '<g transform="translate(19 19) scale(1.08)" fill="none" stroke="' + (active ? '#FFFFFF' : '#C2141A') + '" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' + icon + '</g></svg>';
+  }
+  function img(svg) { var i = new Image(); i.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg); return i; }
+  AGENTS.forEach(function (a) {
+    a.idle = img(nodeSvg(ICONS[a.key], false));
+    a.on = img(nodeSvg(ICONS[a.key], true));
+    a.glow = 0; a.offAt = 0;
+  });
+
+  root.innerHTML =
+    '<canvas class="hx-cv"></canvas><div class="hx-tags"></div>' +
+    '<div class="ob-status">' +
+      '<img class="ob-node" alt="">' +
+      '<div class="ob-txt"><span class="ob-eyebrow">Agent Cloud <em>→</em> <b data-name></b> agent</span>' +
+      '<span class="ob-task"><span data-task></span><i class="hx-caret"></i></span></div>' +
+      '<div class="ob-meta"><b data-count>1,284</b><span>tasks today</span></div>' +
+      '<span class="ob-bar"><i data-bar></i></span>' +
+    '</div>';
+
+  var cv = root.querySelector('canvas'), ctx = cv.getContext('2d');
+  var tagsEl = root.querySelector('.hx-tags');
+  var tags = AGENTS.map(function (a) { var s = document.createElement('span'); s.className = 'ob-tag'; s.textContent = a.name; tagsEl.appendChild(s); return s; });
+  var nodeEl = root.querySelector('.ob-node'), nameEl = root.querySelector('[data-name]'), taskEl = root.querySelector('[data-task]');
+  var countEl = root.querySelector('[data-count]'), bar = root.querySelector('[data-bar]');
+  var count = 1284, typeToken = 0;
+
+  function type(text) {
+    var my = ++typeToken, i = 0;
+    if (reduced) { taskEl.textContent = text; return; }
+    taskEl.textContent = '';
+    (function step() {
+      if (my !== typeToken) return;
+      taskEl.textContent = text.slice(0, ++i);
+      if (i < text.length) setTimeout(step, 18 + Math.random() * 22);
+    })();
+  }
+
+  // Sphere points on a Fibonacci lattice
+  var N = 620, pts = [];
+  for (var i = 0; i < N; i++) {
+    var y = 1 - 2 * (i + 0.5) / N, r = Math.sqrt(1 - y * y), ph = i * 2.399963;
+    pts.push([Math.cos(ph) * r, y, Math.sin(ph) * r]);
+  }
+  var ORBITS = [
+    { r: 0.35, inc: 0.30, rz: -0.40, sp: 0.22, ag: [0, 3] },
+    { r: 0.38, inc: 0.26, rz: 0.36, sp: -0.16, ag: [1, 4] },
+    { r: 0.29, inc: 0.34, rz: 1.40, sp: 0.19, ag: [2, 5] }
+  ];
+  var slot = [];
+  ORBITS.forEach(function (o, oi) { o.ag.forEach(function (ai, k) { slot[ai] = { o: o, ph: k * Math.PI + oi * 0.9 }; }); });
+  var hist = AGENTS.map(function () { return []; });
+  var W = 0, H = 0, S, cx, cy, F, act = -1, actAt = 0;
+
+  function rotX(p, a) { var c = Math.cos(a), s = Math.sin(a); return [p[0], p[1] * c - p[2] * s, p[1] * s + p[2] * c]; }
+  function rotY(p, a) { var c = Math.cos(a), s = Math.sin(a); return [p[0] * c + p[2] * s, p[1], -p[0] * s + p[2] * c]; }
+  function rotZ(p, a) { var c = Math.cos(a), s = Math.sin(a); return [p[0] * c - p[1] * s, p[0] * s + p[1] * c, p[2]]; }
+  function orbitPoint(o, th) {
+    var x = Math.cos(th) * o.r * S, z = Math.sin(th) * o.r * S;
+    var yy = -z * Math.sin(o.inc); z = z * Math.cos(o.inc);
+    return rotZ([x, yy, z], o.rz);
+  }
+  function proj(p) { var s = F / (F + p[2]); return [cx + p[0] * s, cy + p[1] * s, s]; }
+  function disc(x, y, rad) { ctx.beginPath(); ctx.arc(x, y, rad, 0, TAU); ctx.fill(); }
+  function seg(a, b) { ctx.beginPath(); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); ctx.stroke(); }
+  function ease(x) { return x < 0.5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2; }
+
+  function drawOrbits(front) {
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = front ? 'rgba(194,20,26,.26)' : 'rgba(194,20,26,.09)';
+    ctx.beginPath();
+    ORBITS.forEach(function (o) {
+      var prev = null;
+      for (var k = 0; k <= 140; k++) {
+        var p = orbitPoint(o, k / 140 * TAU), q = proj(p);
+        if (prev && (p[2] <= 0) === front) { ctx.moveTo(prev[0], prev[1]); ctx.lineTo(q[0], q[1]); }
+        prev = q;
+      }
+    });
+    ctx.stroke();
+  }
+
+  function drawSphere(t) {
+    var R = S * 0.19, ay = t * 0.16, ax = 0.42, P = new Array(N), i;
+    for (i = 0; i < N; i++) {
+      var q = rotX(rotY(pts[i], ay), ax), pr = proj([q[0] * R, q[1] * R, q[2] * R]);
+      P[i] = [pr[0], pr[1], q[2]];
     }
+    var g = ctx.createRadialGradient(cx, cy, 0, cx, cy, R * 1.9);
+    g.addColorStop(0, 'rgba(255,70,80,.30)'); g.addColorStop(0.5, 'rgba(255,70,80,.10)'); g.addColorStop(1, 'rgba(255,70,80,0)');
+    ctx.fillStyle = g; disc(cx, cy, R * 1.9);
+    // back hemisphere
+    ctx.fillStyle = 'rgba(194,20,26,.14)';
+    for (i = 0; i < N; i++) if (P[i][2] > 0) ctx.fillRect(P[i][0] - 0.6, P[i][1] - 0.6, 1.2, 1.2);
+    // mesh between spiral neighbours on the front
+    ctx.strokeStyle = 'rgba(215,25,31,.13)'; ctx.lineWidth = 0.6; ctx.beginPath();
+    for (i = 0; i < N - 34; i++) {
+      if (P[i][2] > 0.05) continue;
+      if (P[i + 21][2] <= 0.05) { ctx.moveTo(P[i][0], P[i][1]); ctx.lineTo(P[i + 21][0], P[i + 21][1]); }
+      if (P[i + 34][2] <= 0.05) { ctx.moveTo(P[i][0], P[i][1]); ctx.lineTo(P[i + 34][0], P[i + 34][1]); }
+    }
+    ctx.stroke();
+    var nr = R * 0.42 * (1 + Math.sin(t * 2.2) * 0.05);
+    var n = ctx.createRadialGradient(cx, cy, 0, cx, cy, nr);
+    n.addColorStop(0, 'rgba(255,90,98,.85)'); n.addColorStop(0.45, 'rgba(225,22,30,.35)'); n.addColorStop(1, 'rgba(225,22,30,0)');
+    ctx.fillStyle = n; disc(cx, cy, nr);
+    for (i = 0; i < N; i++) {
+      if (P[i][2] > 0) continue;
+      var d = -P[i][2], sz = 0.8 + d * 1.6;
+      ctx.fillStyle = 'rgba(194,20,26,' + (0.25 + d * 0.7).toFixed(2) + ')';
+      ctx.fillRect(P[i][0] - sz / 2, P[i][1] - sz / 2, sz, sz);
+    }
+  }
+
+  function drawBeam(a, t) {
+    ctx.lineCap = 'round';
+    ctx.strokeStyle = 'rgba(255,60,70,' + (0.14 * a.g).toFixed(3) + ')'; ctx.lineWidth = 8; seg([cx, cy], [a.x, a.y]);
+    var gr = ctx.createLinearGradient(cx, cy, a.x, a.y);
+    gr.addColorStop(0, 'rgba(225,22,30,0)'); gr.addColorStop(0.35, 'rgba(225,22,30,' + (0.85 * a.g).toFixed(3) + ')'); gr.addColorStop(1, 'rgba(225,22,30,' + a.g.toFixed(3) + ')');
+    ctx.strokeStyle = gr; ctx.lineWidth = 1.6; seg([cx, cy], [a.x, a.y]);
+    for (var k = 0; k < 3; k++) {
+      var u = ((t - actAt) * 0.75 + k / 3) % 1, px = cx + (a.x - cx) * u, py = cy + (a.y - cy) * u;
+      ctx.fillStyle = 'rgba(225,22,30,' + a.g.toFixed(3) + ')'; disc(px, py, 3.2);
+      ctx.fillStyle = 'rgba(255,255,255,' + a.g.toFixed(3) + ')'; disc(px, py, 1.3);
+    }
+  }
+
+  function drawAgent(a, t) {
+    var behind = a.z > 0, g = a.g, dim = behind ? 0.5 + 0.45 * g : 1;
+    var size = Math.max(34, S * 0.115 * a.s) * (1 + 0.12 * g);
+    var h = hist[a.i];
+    ctx.lineCap = 'round';
+    for (var j = 1; j < h.length; j++) {
+      ctx.strokeStyle = 'rgba(215,25,31,' + (j / h.length * 0.28 * dim).toFixed(3) + ')';
+      ctx.lineWidth = (j / h.length) * 2.6 * a.s; seg(h[j - 1], h[j]);
+    }
+    if (g > 0.01) {
+      var halo = ctx.createRadialGradient(a.x, a.y, size * 0.3, a.x, a.y, size * 1.25);
+      halo.addColorStop(0, 'rgba(255,60,70,' + (0.35 * g).toFixed(3) + ')'); halo.addColorStop(1, 'rgba(255,60,70,0)');
+      ctx.fillStyle = halo; disc(a.x, a.y, size * 1.25);
+      var ph = ((t - actAt) % 1.6) / 1.6;
+      ctx.strokeStyle = 'rgba(225,22,30,' + ((1 - ph) * 0.55 * g).toFixed(3) + ')'; ctx.lineWidth = 1.2;
+      ctx.beginPath(); ctx.arc(a.x, a.y, size * (0.55 + ph * 0.6), 0, TAU); ctx.stroke();
+    }
+    var ag = AGENTS[a.i];
+    ctx.save();
+    ctx.shadowColor = 'rgba(80,10,14,.22)'; ctx.shadowBlur = 16; ctx.shadowOffsetY = 6;
+    ctx.globalAlpha = dim;
+    if (ag.idle.complete) ctx.drawImage(ag.idle, a.x - size / 2, a.y - size / 2, size, size);
+    ctx.restore();
+    if (g > 0.01 && ag.on.complete) {
+      ctx.globalAlpha = g * dim;
+      ctx.drawImage(ag.on, a.x - size / 2, a.y - size / 2, size, size);
+      ctx.globalAlpha = 1;
+    }
+    a.size = size;
+  }
+
+  function frame(t) {
+    ctx.clearRect(0, 0, W, H);
+    var list = AGENTS.map(function (ag, i) {
+      var sl = slot[i], p = orbitPoint(sl.o, sl.ph + t * sl.o.sp), q = proj(p);
+      var g = i === act ? Math.min(1, (t - actAt) / 0.6) : Math.max(0, ag.glow - (t - ag.offAt) / 0.6);
+      return { i: i, x: q[0], y: q[1], s: q[2], z: p[2], g: ease(g) };
+    });
+    list.forEach(function (a) { var hh = hist[a.i]; hh.push([a.x, a.y]); if (hh.length > 26) hh.shift(); });
+
+    ctx.strokeStyle = 'rgba(194,20,26,.07)'; ctx.lineWidth = 1;
+    list.forEach(function (a) { seg([cx, cy], [a.x, a.y]); });
+    drawOrbits(false);
+    list.forEach(function (a) { if (a.z > 0) { if (a.g > 0.01) drawBeam(a, t); drawAgent(a, t); } });
+    drawSphere(t);
+    drawOrbits(true);
+    list.forEach(function (a) { if (a.z <= 0) { if (a.g > 0.01) drawBeam(a, t); drawAgent(a, t); } });
+    list.forEach(function (a) {
+      var tag = tags[a.i], on = a.i === act;
+      tag.style.transform = 'translate(' + a.x.toFixed(1) + 'px,' + (a.y + a.size * 0.56).toFixed(1) + 'px) translate(-50%,0)';
+      tag.style.opacity = (a.z > 0 ? 0.45 + 0.55 * a.g : 1).toFixed(2);
+      if (tag._on !== on) { tag.classList.toggle('on', on); tag._on = on; }
+    });
+  }
+
+  var t0 = performance.now();
+  function now() { return reduced ? 3 : (performance.now() - t0) / 1000; }
+
+  function activate() {
+    var t = now();
+    if (act >= 0) { AGENTS[act].glow = Math.min(1, (t - actAt) / 0.6); AGENTS[act].offAt = t; }
+    act = (act + 1) % AGENTS.length;
+    actAt = t;
+    var a = AGENTS[act];
+    nodeEl.src = a.on.src;
+    nameEl.textContent = a.name;
+    type(a.task);
+    count += 1 + Math.floor(Math.random() * 4);
+    countEl.textContent = count.toLocaleString('en-US');
+    bar.style.transition = 'none'; bar.style.width = '0';
+    void bar.offsetWidth;
+    bar.style.transition = 'width 3.6s linear'; bar.style.width = '100%';
+  }
+
+  function resize() {
+    W = root.clientWidth; H = root.clientHeight;
+    S = W; cx = W / 2; cy = W * 0.5; F = W * 1.8;
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  new ResizeObserver(resize).observe(root); resize();
+  var visible = true;
+  new IntersectionObserver(function (e) { visible = e[0].isIntersecting; }).observe(root);
+  activate();
+  setInterval(activate, 3800);
+  (function loop() {
+    requestAnimationFrame(loop);
+    if (visible && W) frame(now());
   })();
 })();
+
 
 // Approach: clickable steps that auto-advance until the visitor picks one
 (function () {
@@ -957,6 +1120,22 @@ img,svg{max-width:100%}
   document.querySelectorAll('[data-cookie-prefs]').forEach(function (b) {
     b.addEventListener('click', function () { bar.hidden = false; });
   });
+})();
+
+// Use-case screenshots: click to enlarge
+(function () {
+  var box = document.createElement('div');
+  box.className = 'lightbox'; box.hidden = true;
+  box.setAttribute('role', 'dialog'); box.setAttribute('aria-label', 'Screenshot');
+  box.innerHTML = '<img alt="">';
+  document.body.appendChild(box);
+  var img = box.querySelector('img');
+  function close() { box.hidden = true; }
+  document.querySelectorAll('.uc-zoom').forEach(function (b) {
+    b.addEventListener('click', function () { img.src = b.dataset.full; img.alt = b.querySelector('img').alt; box.hidden = false; });
+  });
+  box.addEventListener('click', close);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
 })();
 </script>
 </body></html>
